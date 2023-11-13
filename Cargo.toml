@@ -1,0 +1,27 @@
+[package]
+name = "wry_websocket_rpc_server"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# log
+env_logger = "0.10.0"
+log = "0.4.20"
+# menu / webkit
+muda = "0.10.0"
+wry = "0.34.2"
+# static
+once_cell = "1.18.0"
+# deserialization
+serde = { version = "1.0.192", features = ["derive"] }
+rmp-serde = "1.1.2"
+# async
+futures = "0.3.0"
+async-std = "1"
+# http server + router
+hyper = { version = "0.14", features = ["http1", "server"] }
+routerify = { version = "3", features = ["hyper-http1"] }
+# websocket
+async-tungstenite = { version = "0.23.0", features = ["async-std-runtime"] }
